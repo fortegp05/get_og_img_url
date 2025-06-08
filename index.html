@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image URL Extractor</title>
+    <meta property="og:title" content="OG Image URL Extractor">
+    <meta property="og:description" content="URLを入力してそのページのOG画像URLを取得するWebアプリ">
+    <meta property="og:image" content="og-image.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OG Image URL Extractor">
+    <meta name="twitter:description" content="URLを入力してそのページのOG画像URLを取得するWebアプリ">
+    <meta name="twitter:image" content="og-image.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OG Image URL Extractor</h1>
+        <p>URLを入力してそのページのOG画像URLを取得します</p>
+        
+        <div class="input-section">
+            <input type="url" id="urlInput" placeholder="https://example.com" required>
+            <button id="extractButton">OG画像URL取得</button>
+        </div>
+        
+        <div id="loading" class="loading hidden">取得中...</div>
+        
+        <div id="result" class="result hidden">
+            <h2>結果</h2>
+            <div id="ogImageContainer">
+                <img id="ogImage" alt="OG Image" class="og-image">
+                <p id="ogImageUrl" class="og-url"></p>
+                <button id="copyButton" class="copy-button">URLをコピー</button>
+            </div>
+        </div>
+        
+        <div id="error" class="error hidden">
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
